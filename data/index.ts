@@ -146,7 +146,7 @@ export const projects = [
       "Report generation for quick academic insights",
     ],
     githubLink: "https://github.com/prince-up/Automated-Attendance-Management-System-AAMS-",
-    liveLink: "https://github.com/prince-up/Automated-Attendance-Management-System-AAMS-",
+    liveLink: "https://aams-attendance-system.vercel.app",
   },
   {
     id: 6,
