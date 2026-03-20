@@ -326,17 +326,24 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Freelancer Developer",
-    desc: "Building custom web & mobile projects for clients. Available for freelance collaborations, startup projects, and full-stack development work.",
+    title: "DevOps & CI/CD Developer",
+    desc: "Architecting automated deployment pipelines, containerization strategies, and infrastructure-as-code solutions. Expertise in GitHub Actions, Docker, and cloud deployment patterns for scalable applications.",
     className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
+    title: "Freelancer Developer",
+    desc: "Building custom web & mobile projects for clients. Available for freelance collaborations, startup projects, and full-stack development work.",
+    className: "md:col-span-2",
+    thumbnail: "/exp4.svg",
+  },
+  {
+    id: 5,
     title: "Full Stack Developer",
     desc: "Developing end-to-end solutions with Next.js, React, Node.js, and modern cloud technologies.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/exp1.svg",
   },
 ];
 

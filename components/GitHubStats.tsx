@@ -1,6 +1,24 @@
 import { motion } from "framer-motion";
+import { FiGithub, FiStar, FiGitBranch, FiMessageCircle, FiTrendingUp } from "react-icons/fi";
+import { BiCodeBlock } from "react-icons/bi";
 
 const GitHubStats = () => {
+  const stats = [
+    { label: "Total Stars Earned", value: "35", icon: FiStar, color: "from-yellow-400 to-orange-500" },
+    { label: "Total Commits", value: "219", icon: FiTrendingUp, color: "from-green-400 to-emerald-500" },
+    { label: "Open Source PRs", value: "1", icon: FiGitBranch, color: "from-blue-400 to-cyan-500" },
+    { label: "Public Issues", value: "2", icon: FiMessageCircle, color: "from-pink-400 to-rose-500" },
+  ];
+
+  const topLanguages = [
+    { name: "JavaScript", percentage: 37.93, color: "#f1e05a" },
+    { name: "TypeScript", percentage: 25.39, color: "#3178c6" },
+    { name: "HTML", percentage: 24.11, color: "#e34c26" },
+    { name: "CSS", percentage: 4.53, color: "#563d7c" },
+    { name: "PHP", percentage: 6.30, color: "#777bb4" },
+    { name: "Python", percentage: 1.74, color: "#3572A5" },
+  ];
+
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -15,7 +33,7 @@ const GitHubStats = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
@@ -27,15 +45,112 @@ const GitHubStats = () => {
         My <span className="text-purple">GitHub stats</span>
       </h1>
 
+      {/* Main Stats Grid */}
       <motion.div
-        className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6"
+        className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         initial="hidden"
         whileInView="visible"
         variants={containerVariants}
         viewport={{ once: true, margin: "-100px" }}
       >
+        {stats.map((stat, idx) => {
+          const Icon = stat.icon;
+          return (
+            <motion.div
+              key={idx}
+              className={`rounded-2xl p-6 bg-gradient-to-br ${stat.color} bg-opacity-5 border border-white/10 backdrop-blur-sm overflow-hidden group`}
+              variants={cardVariants}
+              whileHover={{
+                borderColor: "rgba(168, 85, 247, 0.5)",
+                boxShadow: "0 8px 32px rgba(168, 85, 247, 0.15)",
+                scale: 1.05,
+              }}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className={`p-3 rounded-lg bg-gradient-to-br ${stat.color} bg-opacity-20 group-hover:bg-opacity-30 transition-all`}>
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-xs text-white/40">GitHub</span>
+              </div>
+              <motion.div
+                className="text-3xl font-bold text-white mb-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 + idx * 0.1 }}
+              >
+                {stat.value}
+              </motion.div>
+              <p className="text-sm text-white/60 group-hover:text-white/80 transition-colors">{stat.label}</p>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+
+      {/* Languages & Repository Stats */}
+      <motion.div
+        className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8"
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        {/* Top Languages */}
         <motion.div
-          className="rounded-2xl border border-white/10 p-4 bg-black-100 overflow-hidden"
+          className="rounded-2xl border border-white/10 p-8 bg-black-100 backdrop-blur-md"
+          variants={cardVariants}
+          whileHover={{
+            borderColor: "rgba(168, 85, 247, 0.5)",
+            boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
+          }}
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-2 rounded-lg bg-purple/20">
+              <BiCodeBlock className="w-5 h-5 text-purple" />
+            </div>
+            <h3 className="text-lg font-bold text-white">Top Languages</h3>
+          </div>
+          
+          <div className="space-y-4">
+            {topLanguages.map((lang, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: idx * 0.1 }}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div
+                      className="w-3 h-3 rounded-full"
+                      style={{ backgroundColor: lang.color }}
+                    />
+                    <span className="text-sm text-white/80">{lang.name}</span>
+                  </div>
+                  <span className="text-xs text-white/50">{lang.percentage}%</span>
+                </div>
+                <motion.div
+                  className="h-2 bg-white/10 rounded-full overflow-hidden"
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <motion.div
+                    className="h-full rounded-full bg-gradient-to-r"
+                    style={{
+                      backgroundImage: `linear-gradient(to right, ${lang.color}, rgba(168, 85, 247, 0.5))`,
+                    }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${lang.percentage}%` }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: idx * 0.1 }}
+                  />
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* GitHub Stats Image */}
+        <motion.div
+          className="rounded-2xl border border-white/10 p-6 bg-black-100 overflow-hidden"
           variants={cardVariants}
           whileHover={{
             borderColor: "rgba(168, 85, 247, 0.5)",
@@ -49,26 +164,11 @@ const GitHubStats = () => {
             whileHover={{ scale: 1.02 }}
           />
         </motion.div>
-
-        <motion.div
-          className="rounded-2xl border border-white/10 p-4 bg-black-100 overflow-hidden"
-          variants={cardVariants}
-          whileHover={{
-            borderColor: "rgba(168, 85, 247, 0.5)",
-            boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
-          }}
-        >
-          <motion.img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=prince-up&layout=compact&theme=tokyonight&hide_border=true"
-            alt="Prince Yadav top languages"
-            className="w-full rounded-xl"
-            whileHover={{ scale: 1.02 }}
-          />
-        </motion.div>
       </motion.div>
 
+      {/* CTA Button */}
       <motion.div
-        className="mt-8 flex justify-center"
+        className="mt-12 flex justify-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -78,7 +178,7 @@ const GitHubStats = () => {
           href="https://github.com/prince-up?tab=repositories"
           target="_blank"
           rel="noreferrer"
-          className="px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition"
+          className="group px-8 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10 transition flex items-center gap-2"
           whileHover={{
             borderColor: "rgba(168, 85, 247, 0.5)",
             scale: 1.05,
@@ -86,7 +186,9 @@ const GitHubStats = () => {
           }}
           whileTap={{ scale: 0.95 }}
         >
+          <FiGithub className="w-5 h-5" />
           Explore all repositories
+          <span className="group-hover:translate-x-1 transition-transform">→</span>
         </motion.a>
       </motion.div>
     </section>
