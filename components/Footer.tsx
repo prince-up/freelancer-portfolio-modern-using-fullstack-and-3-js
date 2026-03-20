@@ -104,7 +104,7 @@ const Footer = () => {
               Let&apos;s Work <span className="text-purple">Together!</span>
             </h2>
             <p className="text-white-200 mt-4 text-base md:text-lg">
-              I'm available for freelance projects, full-time roles, collaborations, and consultations.
+              I&apos;m available for freelance projects, full-time roles, collaborations, and consultations.
             </p>
           </motion.div>
 
