@@ -1,0 +1,55 @@
+PRINCE YADAV
+B.Tech Student | Full Stack Developer
+Email: princeyadav76001@gmail.com
+GitHub: https://github.com/prince-up
+LinkedIn: https://www.linkedin.com/in/prince-yadav-4t/
+X: https://x.com/prince__up
+
+PROFESSIONAL SUMMARY
+Motivated B.Tech student with hands-on experience in full stack web development, CI/CD projects, and DSA practice. Skilled in building responsive products using Next.js, React, and TypeScript, with a strong focus on clean code and practical implementation.
+
+TECHNICAL SKILLS
+- Languages: C++, JavaScript, Python
+- Frontend: HTML, CSS, React / Next.js
+- Backend: FastAPI, Node.js
+- Database: MongoDB, PostgreSQL
+- Tools: Git, Docker
+
+CORE CS
+- Data Structures and Algorithms
+- DBMS
+- Operating Systems
+- Computer Networks
+
+PROJECTS
+1) Lab-cicd-main
+   - Built CI/CD-focused project covering automation workflows and deployment practices.
+   - Repo: https://github.com/prince-up/Lab-cicd-main
+
+2) SysArena
+   - Developed a system-focused project emphasizing architecture and performance.
+   - Repo: https://github.com/prince-up/SysArena
+
+3) PrinceExt
+   - Built extension-based functionality to improve workflow productivity.
+   - Repo: https://github.com/prince-up/PrinceExt
+
+4) princeio
+   - Implemented personal development experiments and practical feature iterations.
+   - Repo: https://github.com/prince-up/princeio
+
+CERTIFICATIONS AND COURSES
+- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate - Oracle University (Sep 2025)
+- HackHazards 2025 Certificate of Participation - The Namespace Community (May 2025)
+- Full-Stack Development Training (70 Hours) - CipherSchools (Jul 2025)
+- DSA Training Program - Programming Pathshala (Aug 2025)
+- Master Generative AI and Generative AI Tools (ChatGPT and More) - Udemy (Aug 2025)
+- React Native Mobile App Development (Self Paced) - GeeksforGeeks (2025)
+
+EDUCATION
+B.Tech (Current, 3rd Year)
+Lovely Professional University
+
+ACHIEVEMENTS
+- Built and published multiple real-world coding projects on GitHub.
+- Continuously improving DSA and system design for internship and placement readiness.
