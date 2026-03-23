@@ -41,8 +41,8 @@ const ResumeSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <motion.a
-              href="/Prince_Yadav_Resume_ATS.txt"
-              download="Prince_Yadav_Resume.txt"
+              href="/Prince_Yadav_Resume.png"
+              download="Prince_Yadav_Resume.png"
               className="flex-1 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple to-blue-500 hover:from-purple/85 hover:to-blue-600 text-white font-bold text-lg transition transform hover:scale-105"
               whileHover={{
                 scale: 1.08,
@@ -53,7 +53,7 @@ const ResumeSection = () => {
               <motion.div whileHover={{ y: -2, rotate: -10 }}>
                 <FaDownload size={18} />
               </motion.div>
-              Download Resume (TXT)
+              Download Resume (Image)
             </motion.a>
 
             <motion.span

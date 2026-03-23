@@ -15,8 +15,8 @@ const Hero = () => {
       <Hero3D />
 
       <motion.a
-        href="/Prince_Yadav_Resume_ATS.txt"
-        download="Prince_Yadav_Resume.txt"
+        href="/Prince_Yadav_Resume.png"
+        download="Prince_Yadav_Resume.png"
         className="absolute right-2 top-7 z-20 hidden sm:block md:right-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
