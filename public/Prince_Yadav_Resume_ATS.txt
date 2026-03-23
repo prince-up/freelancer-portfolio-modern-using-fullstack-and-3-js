@@ -1,67 +1,54 @@
-PRINCE YADAV
-B.Tech Student | Full Stack Developer
-Email: princeyadav76001@gmail.com
+Prince Yadav
+LinkedIn: linkedin.com/in/prince-yadav-4t/
 GitHub: https://github.com/prince-up
-LinkedIn: https://www.linkedin.com/in/prince-yadav-4t/
-X: https://x.com/prince__up
+Email: princeyadav76001@gmail.com
+Mobile: +91-7986614646
 
-PROFESSIONAL SUMMARY
-Motivated B.Tech student with hands-on experience in full stack web development, CI/CD projects, and DSA practice. Skilled in building responsive products using Next.js, React, and TypeScript, with a strong focus on clean code and practical implementation.
-
-TECHNICAL SKILLS
-- Languages: C++, JavaScript, Python
-- Frontend: HTML, CSS, React / Next.js
-- Backend: FastAPI, Node.js
-- Database: MongoDB, PostgreSQL
-- Tools: Git, Docker
-
-CORE CS
-- Data Structures and Algorithms
-- DBMS
-- Operating Systems
-- Computer Networks
+SKILLS
+- Languages: C++, JavaScript, Typescript
+- Frameworks: HTML and CSS, NodeJS, ExpressJS, ReactJS
+- Tools/Platforms: MySQL, MongoDB, Postman, Firebase, Docker
+- Skills: Data Structures and Algorithms, DBMS, Computer Networks, Operating system, Leadership, Adaptability
 
 PROJECTS
-1) Lab-cicd-main
-   - Built CI/CD-focused project covering automation workflows and deployment practices.
-   - Repo: https://github.com/prince-up/Lab-cicd-main
+DeployFlow (Dec 25' - Jan' 26)
+- Built a CI/CD automation system to trigger and monitor Jenkins pipelines for GitHub repositories.
+- Developed secure Node.js + Express APIs for pipeline execution and status management.
+- Automated build/deploy processes, improving DevOps efficiency and deployment speed.
+- Delivered a scalable, user-centric CI/CD dashboard that simplifies Jenkins pipeline execution and monitoring for GitHub projects, reducing manual overhead and accelerating continuous integration.
+- Tech: Node.js, Express.js, React, Vite, Tailwind CSS, Jenkins, GitHub.
 
-2) SysArena
-   - Developed a system-focused project emphasizing architecture and performance.
-   - Repo: https://github.com/prince-up/SysArena
+Online Assessment System (Aug' 25 - Nov' 25)
+- Engineered a full-stack web application designed for quiz creation and management; implemented real-time score tracking and reporting features that enhanced user engagement.
+- Implemented user authentication and secure session management using JWT, achieving 99.8% session stability.
+- Designed a responsive and user-friendly interface using React.js and Tailwind CSS, enhancing user satisfaction.
+- Developed a scalable online assessment system with dynamic quiz management, real-time score tracking, secure authentication, and automated email notifications.
+- Tech: MongoDB, Express.js, React.js, Node.js, Tailwind CSS, JWT
 
-3) PrinceExt
-   - Built extension-based functionality to improve workflow productivity.
-   - Repo: https://github.com/prince-up/PrinceExt
+TRAINING
+Summer Training in MERN Stack at Cipher School (Jun' 25 - Jul' 25)
+- Created responsive and dynamic web applications using React for front-end development.
+- Designed robust and scalable APIs with NodeJS and Express for efficient server-side logic.
+- Utilized MongoDB for efficient data storage and retrieval, ensuring seamless back-end integration.
+- Applied best practices for authentication and authorization, enhancing application security.
 
-4) princeio
-   - Implemented personal development experiments and practical feature iterations.
-   - Repo: https://github.com/prince-up/princeio
-
-CERTIFICATIONS AND COURSES
-- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate - Oracle University (Sep 2025)
-- HackHazards 2025 Certificate of Participation - The Namespace Community (May 2025)
-- Full-Stack Development Training (70 Hours) - CipherSchools (Jul 2025)
-- DSA Training Program - Programming Pathshala (Aug 2025)
-- Master Generative AI and Generative AI Tools (ChatGPT and More) - Udemy (Aug 2025)
-- React Native Mobile App Development (Self Paced) - GeeksforGeeks (2025)
-
-EDUCATION
-B.Tech (Current, 3rd Year)
-Lovely Professional University
+CERTIFICATES
+- Next.js Development | GFG (Jan' 26)
+- AI foundation associate | ORACLE (Sep' 25)
+- DSA training | ProgrammingPathshala (Aug' 25)
+- React Native Mobile App Development | GFG (Jul' 25)
 
 ACHIEVEMENTS
-Milestones
-- LeetCode Problem Solver
-   Solved over 250 data structures and algorithms problems
-- Smart India Hackathon (SIH)
-   Secured position in Top 100 at the college level
+- Solved 300+ DSA problems on LeetCode.
+- Earned a 5-star rating in C++, DSA, on HackerRank.
+- Successfully completed the LeetCode 100 Days of Code challenge and earned the DCC March badge, highlighting a commitment to ongoing learning and practice.
 
-PLATFORMS
-Coding Profiles
-- LeetCode
-   https://leetcode.com/u/PrinceYadav96/
-- GeeksforGeeks
-   https://www.geeksforgeeks.org/profile/thestudeb8if
-- GitHub
-   https://github.com/prince-up
+EDUCATION
+Lovely Professional University (Punjab, India)
+Bachelor of Technology - Computer Science and Engineering; CGPA: 6.5 (Since Aug' 23)
+
+Smt Ramrati Senior Secondary School (U.P, India)
+Intermediate; Percentage: 72 (Apr' 21 - Mar' 22)
+
+Amrit Public School (U.P, India)
+Matriculation; Percentage: 70 (Apr' 19 - Mar' 20)

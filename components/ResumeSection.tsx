@@ -91,7 +91,76 @@ const ResumeSection = () => {
               <p className="text-white-200 text-sm">Latest projects included</p>
             </motion.div>
           </motion.div>
+
+          {/* Live Text Resume Preview */}
+          <motion.div
+            className="mt-12 w-full bg-[#050510]/80 rounded-2xl border border-white/10 p-6 md:p-8 overflow-y-auto max-h-[500px] text-left shadow-inner relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <div className="sticky top-0 float-right bg-purple-500/20 text-purple-200 text-xs px-3 py-1 rounded-full border border-purple-500/30 backdrop-blur-md">
+              ATS TEXT PREVIEW
+            </div>
+            <pre className="text-white-200/70 font-mono text-xs md:text-sm whitespace-pre-wrap leading-relaxed mt-4">
+{`Prince Yadav
+LinkedIn: linkedin.com/in/prince-yadav-4t/
+GitHub: https://github.com/prince-up
+Email: princeyadav76001@gmail.com
+Mobile: +91-7986614646
+
+SKILLS
+- Languages: C++, JavaScript, Typescript
+- Frameworks: HTML and CSS, NodeJS, ExpressJS, ReactJS
+- Tools/Platforms: MySQL, MongoDB, Postman, Firebase, Docker
+- Skills: Data Structures and Algorithms, DBMS, Computer Networks, Operating system, Leadership, Adaptability
+
+PROJECTS
+DeployFlow (Dec 25' - Jan' 26)
+- Built a CI/CD automation system to trigger and monitor Jenkins pipelines for GitHub repositories.
+- Developed secure Node.js + Express APIs for pipeline execution and status management.
+- Automated build/deploy processes, improving DevOps efficiency and deployment speed.
+- Delivered a scalable, user-centric CI/CD dashboard that simplifies Jenkins pipeline execution and monitoring for GitHub projects, reducing manual overhead and accelerating continuous integration.
+- Tech: Node.js, Express.js, React, Vite, Tailwind CSS, Jenkins, GitHub.
+
+Online Assessment System (Aug' 25 - Nov' 25)
+- Engineered a full-stack web application designed for quiz creation and management; implemented real-time score tracking and reporting features that enhanced user engagement.
+- Implemented user authentication and secure session management using JWT, achieving 99.8% session stability.
+- Designed a responsive and user-friendly interface using React.js and Tailwind CSS, enhancing user satisfaction.
+- Developed a scalable online assessment system with dynamic quiz management, real-time score tracking, secure authentication, and automated email notifications.
+- Tech: MongoDB, Express.js, React.js, Node.js, Tailwind CSS, JWT
+
+TRAINING
+Summer Training in MERN Stack at Cipher School (Jun' 25 - Jul' 25)
+- Created responsive and dynamic web applications using React for front-end development.
+- Designed robust and scalable APIs with NodeJS and Express for efficient server-side logic.
+- Utilized MongoDB for efficient data storage and retrieval, ensuring seamless back-end integration.
+- Applied best practices for authentication and authorization, enhancing application security.
+
+CERTIFICATES
+- Next.js Development | GFG (Jan' 26)
+- AI foundation associate | ORACLE (Sep' 25)
+- DSA training | ProgrammingPathshala (Aug' 25)
+- React Native Mobile App Development | GFG (Jul' 25)
+
+ACHIEVEMENTS
+- Solved 300+ DSA problems on LeetCode.
+- Earned a 5-star rating in C++, DSA, on HackerRank.
+- Successfully completed the LeetCode 100 Days of Code challenge and earned the DCC March badge, highlighting a commitment to ongoing learning and practice.
+
+EDUCATION
+Lovely Professional University (Punjab, India)
+Bachelor of Technology - Computer Science and Engineering; CGPA: 6.5 (Since Aug' 23)
+
+Smt Ramrati Senior Secondary School (U.P, India)
+Intermediate; Percentage: 72 (Apr' 21 - Mar' 22)
+
+Amrit Public School (U.P, India)
+Matriculation; Percentage: 70 (Apr' 19 - Mar' 20)`}
+            </pre>
+          </motion.div>
         </div>
+
       </motion.div>
     </section>
   );
