@@ -1,8 +1,9 @@
 "use client";
 
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaLocationArrow } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { projects } from "@/data";
+import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
   const containerVariants = {
@@ -44,136 +45,70 @@ const RecentProjects = () => {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial="hidden"
-          whileInView="visible"
-          variants={containerVariants}
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {projects.map((item, idx) => (
-            <motion.div
+        <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+          {projects.map((item) => (
+            <div
+              className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
               key={item.id}
-              variants={itemVariants}
-              className="group h-full"
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
             >
-              <div className="relative h-full rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-purple-500/20">
-                
-                {/* Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5 transition-all duration-300" />
-                <motion.div
-                  className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-purple-500/20 blur-3xl"
-                  animate={{ x: [0, 10, 0], y: [0, 14, 0], opacity: [0.25, 0.5, 0.25] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                />
-
-                {/* Content Container */}
-                <div className="relative z-10 p-6 h-full flex flex-col gap-3">
-                  <motion.div
-                    className="mb-2 overflow-hidden rounded-lg border border-white/10"
-                    whileHover={{ scale: 1.01 }}
-                    transition={{ duration: 0.25 }}
+              <PinContainer
+                title={item.liveLink}
+                href={item.liveLink}
+              >
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                  <div
+                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                    style={{ backgroundColor: "#13162D" }}
                   >
-                    <motion.img
-                      src={item.img}
-                      alt={`${item.title} preview`}
-                      className="h-36 w-full object-cover"
-                      whileHover={{ scale: 1.08 }}
-                      transition={{ duration: 0.45, ease: "easeOut" }}
-                    />
-                  </motion.div>
-                  
-                  {/* Project Number */}
-                  <motion.div
-                    className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-purple-600/30 text-purple-300 font-bold text-sm mb-4 border border-purple-500/50"
-                    whileHover={{ scale: 1.15, rotate: 360 }}
-                    transition={{ duration: 0.6, type: "spring" }}
-                  >
-                    {idx + 1}
-                  </motion.div>
+                    <img src="/bg.png" alt="bgimg" />
+                  </div>
+                  <img
+                    src={item.img}
+                    alt="cover"
+                    className="z-10 absolute bottom-0"
+                  />
+                </div>
 
-                  {/* Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-purple-300 transition-colors duration-300">
-                    {item.title}
-                  </h3>
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                  {item.title}
+                </h1>
 
-                  {/* Description */}
-                  <p className="text-white/70 text-sm leading-relaxed line-clamp-3 group-hover:text-white/90 transition-colors duration-300">
-                    {item.des}
-                  </p>
+                <p
+                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                  style={{
+                    color: "#BEC1DD",
+                    margin: "1vh 0",
+                  }}
+                >
+                  {item.des}
+                </p>
 
-                  {/* Presentation Points */}
-                  <div className="space-y-2 min-h-[86px]">
-                    {item.features.slice(0, 2).map((point, index) => (
-                      <p
-                        key={index}
-                        className="text-xs text-white/75 leading-relaxed flex items-start gap-2"
+                <div className="flex items-center justify-between mt-7 mb-3">
+                  <div className="flex items-center">
+                    {item.iconLists.map((icon, index) => (
+                      <div
+                        key={icon}
+                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        style={{
+                          transform: `translateX(-${5 * index + 2}px)`,
+                        }}
                       >
-                        <span className="text-purple-300 mt-[2px]">•</span>
-                        <span>{point}</span>
-                      </p>
+                         <img src={icon} alt="icon5" className="p-2" />
+                      </div>
                     ))}
                   </div>
 
-                  {/* Tech Stack */}
-                  <div className="mb-1">
-                    <div className="flex flex-wrap gap-2">
-                      {item.techStack.slice(0, 2).map((tech, i) => (
-                        <motion.span
-                          key={i}
-                          className="text-xs px-2.5 py-1 rounded-full bg-purple-600/25 text-purple-200 border border-purple-500/40"
-                          whileHover={{ scale: 1.08 }}
-                        >
-                          {tech}
-                        </motion.span>
-                      ))}
-                      {item.techStack.length > 2 && (
-                        <span className="text-xs px-2.5 py-1 rounded-full bg-white/10 text-white/60 border border-white/20">
-                          +{item.techStack.length - 2}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t border-white/10 my-2" />
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    <motion.a
-                      href={item.githubLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-purple-300 bg-purple-600/20 border border-purple-500/40 hover:bg-purple-600/40 hover:border-purple-500/70 transition-all"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub size={13} />
-                      <span className="hidden sm:inline">Code</span>
-                    </motion.a>
-
-                    {item.liveLink !== item.githubLink && (
-                      <motion.a
-                        href={item.liveLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-blue-300 bg-blue-600/20 border border-blue-500/40 hover:bg-blue-600/40 hover:border-blue-500/70 transition-all"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <FaExternalLinkAlt size={12} />
-                        <span className="hidden sm:inline">Live</span>
-                      </motion.a>
-                    )}
+                  <div className="flex justify-center items-center">
+                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                      Check Live Site
+                    </p>
+                    <FaLocationArrow className="ms-3" color="#CBACF9" />
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </PinContainer>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* View All Button */}
         <motion.div

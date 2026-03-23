@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
@@ -20,8 +21,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -137,10 +137,8 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-2xl max-w-96 font-bold z-10 leading-snug`}
           >
             {title}
           </div>
@@ -148,18 +146,23 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
 
-          {/* Tech stack list div */}
           {id === 3 && (
-            <div className="mt-4 w-full">
-              <div className="flex flex-wrap gap-2 lg:gap-3">
-                {allTechStack.map((item, i) => (
-                  <span
-                    key={i}
-                    className="py-1.5 px-3 text-xs lg:text-sm rounded-lg text-center bg-[#10132E] border border-white/10 text-white/90"
-                  >
-                    {item}
-                  </span>
-                ))}
+            <div className="mt-4 relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              <div className="flex w-max">
+                <motion.div
+                  className="flex gap-2 min-w-full"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
+                >
+                  {[...allTechStack, ...allTechStack].map((item, i) => (
+                    <span
+                      key={i}
+                      className="py-1.5 px-3 whitespace-nowrap text-xs lg:text-sm rounded-lg text-center bg-[#10132E] border border-white/10 text-white/90"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </motion.div>
               </div>
             </div>
           )}

@@ -51,5 +51,17 @@ B.Tech (Current, 3rd Year)
 Lovely Professional University
 
 ACHIEVEMENTS
-- Built and published multiple real-world coding projects on GitHub.
-- Continuously improving DSA and system design for internship and placement readiness.
+Milestones
+- LeetCode Problem Solver
+   Solved over 250 data structures and algorithms problems
+- Smart India Hackathon (SIH)
+   Secured position in Top 100 at the college level
+
+PLATFORMS
+Coding Profiles
+- LeetCode
+   https://leetcode.com/u/PrinceYadav96/
+- GeeksforGeeks
+   https://www.geeksforgeeks.org/profile/thestudeb8if
+- GitHub
+   https://github.com/prince-up

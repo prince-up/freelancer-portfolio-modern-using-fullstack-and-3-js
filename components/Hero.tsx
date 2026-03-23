@@ -1,171 +1,149 @@
 import { FaLocationArrow } from "react-icons/fa6";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiTwitter } from "react-icons/fi";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "./MagicButton";
 
 const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const socialIconVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-    hover: { scale: 1.2, rotate: 5 },
-  };
-
   return (
-    <div className="pb-20 pt-36">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
-      <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center"
-      >
-        {/* Radial gradient for the container to give a faded look */}
-        <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-        />
-      </div>
-
-      <div className="flex justify-center relative my-20 z-10">
+    <section className="relative min-h-[92vh] overflow-hidden pt-28 md:pt-32">      <div className="pointer-events-none absolute inset-0">
         <motion.div
-          className="max-w-[92vw] md:max-w-2xl lg:max-w-[62vw] flex flex-col items-center justify-center"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <motion.span
-            className="mb-6 px-4 py-2 rounded-full border border-white/20 bg-white/5 text-[11px] md:text-xs uppercase tracking-[0.25em] text-blue-100 inline-block"
-            variants={itemVariants}
-          >
-            Prince Yadav | B.Tech 3rd Year
-          </motion.span>
-
-          <motion.div variants={itemVariants}>
-            <TextGenerateEffect
-              words="I build modern web products that are fast, clean, and user-focused"
-              className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            />
-          </motion.div>
-
-          <motion.p
-            className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl text-white-200 max-w-3xl"
-            variants={itemVariants}
-          >
-            Hi, I&apos;m Prince Yadav. I design and develop real-world full stack projects with Next.js, React, TypeScript, and modern UI systems.
-          </motion.p>
-
-          <motion.div
-            className="flex flex-col md:flex-row items-center gap-4"
-            variants={itemVariants}
-          >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a href="#projects">
-                <MagicButton
-                  title="View my projects"
-                  icon={<FaLocationArrow />}
-                  position="right"
-                />
-              </a>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <a href="#contact">
-                <MagicButton
-                  title="Hire me"
-                  icon={<FaLocationArrow />}
-                  position="right"
-                  otherClasses="!bg-black-100"
-                />
-              </a>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="mt-10 flex items-center gap-5"
-            variants={containerVariants}
-          >
-            <motion.a
-              href="https://github.com/prince-up"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white-200 hover:text-white transition-colors"
-              aria-label="Prince Yadav GitHub"
-              variants={socialIconVariants}
-              whileHover="hover"
-            >
-              <FiGithub size={24} />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/prince-yadav-4t/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white-200 hover:text-white transition-colors"
-              aria-label="Prince Yadav LinkedIn"
-              variants={socialIconVariants}
-              whileHover="hover"
-            >
-              <FiLinkedin size={24} />
-            </motion.a>
-            <motion.a
-              href="https://x.com/prince__up"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white-200 hover:text-white transition-colors"
-              aria-label="Prince Yadav X"
-              variants={socialIconVariants}
-              whileHover="hover"
-            >
-              <FiTwitter size={24} />
-            </motion.a>
-          </motion.div>
-        </motion.div>
+          animate={{ x: [0, 40, 0], y: [0, -40, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute left-[-12%] top-[22%] h-[480px] w-[480px] rounded-full bg-cyan-400/20 blur-[100px]"
+        />
+        <motion.div
+          animate={{ x: [0, -30, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          className="absolute right-[-10%] top-[10%] h-[420px] w-[420px] rounded-full bg-blue-500/20 blur-[95px]"
+        />
+        <motion.div
+          animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-[-18%] right-[-6%] h-[520px] w-[520px] rounded-full bg-cyan-300/15 blur-[120px]"
+        />
       </div>
-    </div>
+
+      <motion.a
+        href="/Prince_Yadav_Resume_ATS.txt"
+        download="Prince_Yadav_Resume.txt"
+        className="absolute right-2 top-7 z-20 hidden sm:block md:right-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <MagicButton
+          title="View Resume"
+          icon={<FaLocationArrow />}
+          position="left"
+          otherClasses="!bg-black-100"
+        />
+      </motion.a>
+
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-2 pb-16 text-center">
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="absolute -inset-6 rounded-full border border-cyan-300/20" />
+          <div className="absolute -inset-3 rounded-full border border-blue-300/25" />
+          <div className="relative h-36 w-36 overflow-hidden rounded-full border-2 border-blue-300/50 shadow-[0_0_40px_rgba(59,130,246,0.35)] md:h-40 md:w-40">
+            <Image
+              src="/princeimm.jpeg"
+              alt="Prince Yadav"
+              fill
+              priority
+              sizes="(max-width: 768px) 144px, 160px"
+              className="object-cover object-center"
+            />
+          </div>
+        </motion.div>
+
+        <motion.h1
+          className="mt-10 font-serif text-5xl font-bold leading-none text-white md:text-7xl"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+        >
+          Prince Yadav
+        </motion.h1>
+
+        <motion.p
+          className="mt-4 text-lg text-white-200 md:text-2xl"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        >
+          MERN Stack Developer | Tech Enthusiast
+        </motion.p>
+
+        <motion.p
+          className="mt-4 max-w-3xl text-sm text-white-200/90 md:text-base"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+        >
+          Building robust and scalable web applications with MongoDB, Express.js, React.js, and Node.js. Solved 250+ LeetCode problems and actively open to impactful opportunities.
+        </motion.p>
+
+        <motion.div
+          className="mt-8 flex items-center gap-6"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.55, ease: "easeOut" }}
+        >
+          <a
+            href="https://github.com/prince-up"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white-200 transition hover:text-white"
+            aria-label="Prince Yadav GitHub"
+          >
+            <FiGithub size={32} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/prince-yadav-4t/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white-200 transition hover:text-white"
+            aria-label="Prince Yadav LinkedIn"
+          >
+            <FiLinkedin size={32} />
+          </a>
+          <a
+            href="mailto:princeyadav76001@gmail.com"
+            className="text-white-200 transition hover:text-white"
+            aria-label="Prince Yadav Email"
+          >
+            <FiMail size={32} />
+          </a>
+          <a
+            href="https://x.com/prince__up"
+            target="_blank"
+            rel="noreferrer"
+            className="text-white-200 transition hover:text-white"
+            aria-label="Prince Yadav X"
+          >
+            <FiTwitter size={32} />
+          </a>
+        </motion.div>
+
+        <motion.a
+          href="#projects"
+          className="mt-10 rounded-full border border-white/20 bg-black/30 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white-200"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+        >
+          Explore Projects
+        </motion.a>
+      </div>
+    </section>
   );
 };
 
