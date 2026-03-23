@@ -6,26 +6,13 @@ import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./MagicButton";
+import dynamic from "next/dynamic";
+const Hero3D = dynamic(() => import('./ui/Hero3D'), { ssr: false });
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[92vh] overflow-hidden pt-28 md:pt-32">      <div className="pointer-events-none absolute inset-0">
-        <motion.div
-          animate={{ x: [0, 40, 0], y: [0, -40, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute left-[-12%] top-[22%] h-[480px] w-[480px] rounded-full bg-cyan-400/20 blur-[100px]"
-        />
-        <motion.div
-          animate={{ x: [0, -30, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="absolute right-[-10%] top-[10%] h-[420px] w-[420px] rounded-full bg-blue-500/20 blur-[95px]"
-        />
-        <motion.div
-          animate={{ x: [0, 50, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-18%] right-[-6%] h-[520px] w-[520px] rounded-full bg-cyan-300/15 blur-[120px]"
-        />
-      </div>
+    <section className="relative min-h-[92vh] overflow-hidden pt-28 md:pt-32">
+      <Hero3D />
 
       <motion.a
         href="/Prince_Yadav_Resume_ATS.txt"
@@ -88,7 +75,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Building robust and scalable web applications with MongoDB, Express.js, React.js, and Node.js. Solved 250+ LeetCode problems and actively open to impactful opportunities.
+          Freelance Full Stack Developer specializing in the MERN stack. I transform complex ideas into robust, highly-interactive web applications and scalable digital solutions. Actively taking on new clients and freelance partnerships worldwide.
         </motion.p>
 
         <motion.div

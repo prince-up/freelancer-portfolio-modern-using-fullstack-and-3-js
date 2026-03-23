@@ -45,68 +45,58 @@ const RecentProjects = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 mt-10 md:mt-16 sm:px-4">
           {projects.map((item) => (
-            <div
-              className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            <motion.div
+              layout
               key={item.id}
+              className="flex items-center justify-center w-full min-h-[30rem] md:min-h-[35rem]"
             >
               <PinContainer
-                title={item.liveLink}
+                title="Visit Live Site"
                 href={item.liveLink}
               >
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                  <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                    style={{ backgroundColor: "#13162D" }}
-                  >
-                    <img src="/bg.png" alt="bgimg" />
-                  </div>
-                  <img
-                    src={item.img}
-                    alt="cover"
-                    className="z-10 absolute bottom-0"
-                  />
-                </div>
-
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                  {item.title}
-                </h1>
-
-                <p
-                  className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                  style={{
-                    color: "#BEC1DD",
-                    margin: "1vh 0",
-                  }}
-                >
-                  {item.des}
-                </p>
-
-                <div className="flex items-center justify-between mt-7 mb-3">
-                  <div className="flex items-center">
-                    {item.iconLists.map((icon, index) => (
-                      <div
-                        key={icon}
-                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                        style={{
-                          transform: `translateX(-${5 * index + 2}px)`,
-                        }}
-                      >
-                         <img src={icon} alt="icon5" className="p-2" />
-                      </div>
-                    ))}
+                <div className="flex flex-col w-[85vw] sm:w-[24rem] md:w-[30vw] lg:w-[28vw] rounded-2xl overflow-hidden p-2">
+                  <div className="relative flex items-center justify-center w-full overflow-hidden h-[25vh] lg:h-[30vh] md:h-[28vh] mb-6 rounded-2xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#13162D]/50 drop-shadow-xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 z-0" />
+                    <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover opacity-60 z-0" />
+                    <img
+                      src={item.img}
+                      alt="cover"
+                      className="z-10 absolute bottom-0 max-h-[90%] transform group-hover/pin:scale-105 transition-transform duration-500 will-change-transform"
+                    />
                   </div>
 
-                  <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                      Check Live Site
-                    </p>
-                    <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <h1 className="font-bold text-xl md:text-2xl text-white tracking-wide line-clamp-1 drop-shadow-md">
+                    {item.title}
+                  </h1>
+
+                  <p className="font-light text-sm md:text-base text-purple-200/80 mt-2 mb-6 line-clamp-2 min-h-12 leading-relaxed">
+                    {item.des}
+                  </p>
+
+                  <div className="flex items-center justify-between mt-auto border-t border-white/5 pt-4">
+                    <div className="flex items-center -space-x-3">
+                      {item.iconLists.map((icon, index) => (
+                        <div
+                          key={icon}
+                          className="border border-white/20 rounded-full bg-black/60 backdrop-blur-md w-8 h-8 md:w-10 md:h-10 flex justify-center items-center shadow-lg hover:z-50 hover:scale-110 transition-transform cursor-pointer"
+                        >
+                           <img src={icon} alt={`tech-${index}`} className="p-2 w-full h-full object-contain" />
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex justify-center items-center gap-2 group cursor-pointer transition-colors hover:text-cyan-400">
+                      <p className="flex text-sm md:text-base font-semibold text-purple-300 group-hover:text-cyan-400 transition-colors">
+                        Live Site
+                      </p>
+                      <FaLocationArrow className="text-purple-300 group-hover:text-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={12} />
+                    </div>
                   </div>
                 </div>
               </PinContainer>
-            </div>
+            </motion.div>
           ))}
         </div>
 

@@ -77,7 +77,7 @@ export const projects = [
     id: 1,
     title: "Lab-cicd-main",
     des: "A complete CI/CD practice project where I automated build, test, and deployment flow to simulate real DevOps pipelines.",
-    img: "/p1.svg",
+    img: "/projects/lab_cicd.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     techStack: ["GitHub Actions", "Docker", "Node.js", "YAML"],
     features: [
@@ -92,7 +92,7 @@ export const projects = [
     id: 2,
     title: "SysArena",
     des: "A system-design oriented project where I implemented modular architecture and performance-focused frontend engineering patterns.",
-    img: "/p2.svg",
+    img: "/projects/sysarena.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
     features: [
@@ -107,7 +107,7 @@ export const projects = [
     id: 3,
     title: "PrinceExt",
     des: "A productivity extension project focused on reducing repetitive tasks and improving daily development workflow.",
-    img: "/p3.svg",
+    img: "/projects/princeext.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     techStack: ["JavaScript", "Browser APIs", "HTML", "CSS"],
     features: [
@@ -122,7 +122,7 @@ export const projects = [
     id: 4,
     title: "princeio",
     des: "An experimental engineering space where I build, test, and iterate practical UI and full-stack implementation ideas.",
-    img: "/p4.svg",
+    img: "/projects/princeio.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     features: [
@@ -137,7 +137,7 @@ export const projects = [
     id: 5,
     title: "AAMS",
     des: "Automated Attendance Management System designed to simplify student attendance tracking, reporting, and academic monitoring.",
-    img: "/p2.svg",
+    img: "/projects/aams_dashboard.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/c.svg", "/re.svg"],
     techStack: ["React", "Node.js", "MongoDB", "Express"],
     features: [
@@ -152,7 +152,7 @@ export const projects = [
     id: 6,
     title: "Meditrack",
     des: "A healthcare connectivity platform to bridge doctors and patients with appointments, records, and streamlined communication.",
-    img: "/p1.svg",
+    img: "/projects/meditrack.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/gsap.svg", "/re.svg"],
     techStack: ["React", "Next.js", "Node.js", "MongoDB"],
     features: [
