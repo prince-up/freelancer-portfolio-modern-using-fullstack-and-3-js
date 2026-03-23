@@ -57,14 +57,34 @@ const RecentProjects = () => {
               key={item.id}
               variants={itemVariants}
               className="group h-full"
+              whileHover={{ y: -8 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <div className="relative h-full rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 bg-gradient-to-br from-slate-900/50 to-black/50 backdrop-blur-sm hover:shadow-2xl hover:shadow-purple-500/20">
                 
                 {/* Background Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5 transition-all duration-300" />
+                <motion.div
+                  className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-purple-500/20 blur-3xl"
+                  animate={{ x: [0, 10, 0], y: [0, 14, 0], opacity: [0.25, 0.5, 0.25] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                />
 
                 {/* Content Container */}
                 <div className="relative z-10 p-6 h-full flex flex-col gap-3">
+                  <motion.div
+                    className="mb-2 overflow-hidden rounded-lg border border-white/10"
+                    whileHover={{ scale: 1.01 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <motion.img
+                      src={item.img}
+                      alt={`${item.title} preview`}
+                      className="h-36 w-full object-cover"
+                      whileHover={{ scale: 1.08 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                    />
+                  </motion.div>
                   
                   {/* Project Number */}
                   <motion.div

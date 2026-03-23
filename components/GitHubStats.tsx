@@ -157,6 +157,24 @@ const GitHubStats = () => {
             boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
           }}
         >
+          <div className="mb-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-purple/30 blur-md"
+                  animate={{ opacity: [0.3, 0.8, 0.3] }}
+                  transition={{ duration: 2.2, repeat: Infinity }}
+                />
+                <img src="/git.svg" alt="GitHub logo" className="relative z-10 h-8 w-8" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-white">GitHub Profile Overview</p>
+                <p className="text-xs text-white/60">Live stats for prince-up</p>
+              </div>
+            </div>
+            <FiGithub className="h-5 w-5 text-white/70" />
+          </div>
+
           <motion.img
             src="https://github-readme-stats.vercel.app/api?username=prince-up&show_icons=true&theme=tokyonight&hide_border=true"
             alt="Prince Yadav GitHub stats"

@@ -199,7 +199,8 @@ export const certifications = [
     issuer: "Oracle University",
     date: "Sep 2025",
     category: "Certification",
-    icon: "🏆",
+    icon: "",
+    image: "/Screenshot 2026-03-23 093627.png",
   },
   {
     id: 2,
@@ -208,6 +209,7 @@ export const certifications = [
     date: "May 2025",
     category: "Hackathon",
     icon: "🚀",
+    image: "/1748330155374.jpg",
   },
   {
     id: 3,
@@ -216,6 +218,7 @@ export const certifications = [
     date: "Jul 2025",
     category: "Training",
     icon: "💻",
+    image: "/cipherschools-fullstack.png",
   },
   {
     id: 4,
@@ -224,6 +227,7 @@ export const certifications = [
     date: "Aug 2025",
     category: "Course",
     icon: "📚",
+    image: "/pathshala-dsa.jpg",
   },
   {
     id: 5,
@@ -232,6 +236,7 @@ export const certifications = [
     date: "Aug 2025",
     category: "Course",
     icon: "✨",
+    image: "/udemy-generative-ai.png",
   },
   {
     id: 6,
@@ -240,6 +245,7 @@ export const certifications = [
     date: "2025",
     category: "Course",
     icon: "📱",
+    image: "/geeksforgeeks-react-native.png",
   },
 ];
 
@@ -315,7 +321,7 @@ export const workExperience = [
     title: "Internship - WorldWin Coder Pvt. Ltd.",
     desc: "Worked on CMS (Content Management Systems) and E-commerce Development. Demonstrated dedication, enthusiasm, and professionalism while delivering high-quality solutions. (May 20, 2025 - July 16, 2025)",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/worldwincoder-logo.png",
   },
   {
     id: 2,
