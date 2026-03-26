@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { 
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiThreedotjs,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql,
-  SiGit, SiDocker, SiFramer, SiGreensock, SiRedux, SiPrisma
+  SiGit, SiDocker, SiFramer, SiGreensock, SiRedux, SiPrisma, SiAmazonaws
 } from "react-icons/si";
 import { FaCogs } from "react-icons/fa";
 
@@ -25,6 +25,7 @@ const allSkills = [
   { name: "GSAP", icon: SiGreensock, color: "#88CE02" },
   { name: "Redux", icon: SiRedux, color: "#764ABC" },
   { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+  { name: "AWS", icon: SiAmazonaws, color: "#FF9900" },
   { name: "CI / CD", icon: FaCogs, color: "#00D9FF" },
 ];
 

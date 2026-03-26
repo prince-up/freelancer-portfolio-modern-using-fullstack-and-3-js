@@ -1,3 +1,5 @@
+
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -103,7 +105,7 @@ export const projects = [
     id: 3,
     title: "Online Assessment System",
     des: "Scalable evaluation engine for secure technical testing. Featuring real-time proctoring and automated code evaluation.",
-    img: "/projects/assessment.png",
+    img: "/projects/princeio.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     techStack: ["React", "Node.js", "MongoDB", "Socket.io"],
     challenge: "Maintaining real-time socket connections for high-concurrency exams.",
@@ -116,7 +118,7 @@ export const projects = [
     id: 4,
     title: "Global Travel & Tourism",
     des: "Enterprise-grade hospitality platform specializing in immersive destination experiences and seamless booking workflows.",
-    img: "/projects/travel.png",
+    img: "/projects/meditrack.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     techStack: ["Next.js", "React", "Cloudinary", "Framer Motion"],
     challenge: "Performance bottlenecks when rendering high-res 4K destination assets.",
