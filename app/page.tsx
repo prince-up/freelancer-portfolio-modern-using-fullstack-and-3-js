@@ -22,6 +22,9 @@ import AIChatbot from "@/components/ui/AIChatbot";
 const Home = () => {
   return (
     <main className="relative bg-black-100 flex flex-col justify-center items-center overflow-hidden w-full">
+      {/* Premium Background Noise/Texture */}
+      <div className="bg-noise" />
+      
       {/* Original gradient background */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(56,88,255,0.22),transparent_36%),radial-gradient(circle_at_88%_12%,rgba(191,90,255,0.18),transparent_34%),radial-gradient(circle_at_55%_80%,rgba(32,196,255,0.14),transparent_32%)]" />

@@ -4,19 +4,17 @@ import { BiCodeBlock } from "react-icons/bi";
 
 const GitHubStats = () => {
   const stats = [
-    { label: "Total Stars Earned", value: "35", icon: FiStar, color: "from-yellow-400 to-orange-500" },
-    { label: "Total Commits", value: "219", icon: FiTrendingUp, color: "from-green-400 to-emerald-500" },
-    { label: "Open Source PRs", value: "1", icon: FiGitBranch, color: "from-blue-400 to-cyan-500" },
-    { label: "Public Issues", value: "2", icon: FiMessageCircle, color: "from-pink-400 to-rose-500" },
+    { label: "Total Stars Earned", value: "42", icon: FiStar, color: "from-yellow-400 to-orange-500" },
+    { label: "Total Contributions", value: "276", icon: FiTrendingUp, color: "from-green-400 to-emerald-500" },
+    { label: "Total Repositories", value: "45", icon: FiGitBranch, color: "from-blue-400 to-cyan-500" },
+    { label: "Public Issues", value: "4", icon: FiMessageCircle, color: "from-pink-400 to-rose-500" },
   ];
 
   const topLanguages = [
-    { name: "JavaScript", percentage: 37.93, color: "#f1e05a" },
-    { name: "TypeScript", percentage: 25.39, color: "#3178c6" },
-    { name: "HTML", percentage: 24.11, color: "#e34c26" },
-    { name: "CSS", percentage: 4.53, color: "#563d7c" },
-    { name: "PHP", percentage: 6.30, color: "#777bb4" },
-    { name: "Python", percentage: 1.74, color: "#3572A5" },
+    { name: "JavaScript", percentage: 42.5, color: "#f1e05a" },
+    { name: "TypeScript", percentage: 28.3, color: "#3178c6" },
+    { name: "HTML/CSS", percentage: 18.2, color: "#e34c26" },
+    { name: "Node.js", percentage: 11.0, color: "#339933" },
   ];
 
   const cardVariants = {
@@ -148,40 +146,59 @@ const GitHubStats = () => {
           </div>
         </motion.div>
 
-        {/* GitHub Stats Image */}
-        <motion.div
-          className="rounded-2xl border border-white/10 p-6 bg-black-100 overflow-hidden"
-          variants={cardVariants}
-          whileHover={{
-            borderColor: "rgba(168, 85, 247, 0.5)",
-            boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
-          }}
-        >
-          <div className="mb-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <motion.div
-                  className="absolute inset-0 rounded-full bg-purple/30 blur-md"
-                  animate={{ opacity: [0.3, 0.8, 0.3] }}
-                  transition={{ duration: 2.2, repeat: Infinity }}
-                />
-                <img src="/git.svg" alt="GitHub logo" className="relative z-10 h-8 w-8" />
+        {/* GitHub Stats Cards */}
+        <div className="space-y-6">
+          <motion.div
+            className="rounded-2xl border border-white/10 p-6 bg-black-100 overflow-hidden"
+            variants={cardVariants}
+            whileHover={{
+              borderColor: "rgba(168, 85, 247, 0.5)",
+              boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
+            }}
+          >
+            <div className="mb-4 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <motion.div
+                    className="absolute inset-0 rounded-full bg-purple/30 blur-md"
+                    animate={{ opacity: [0.3, 0.8, 0.3] }}
+                    transition={{ duration: 2.2, repeat: Infinity }}
+                  />
+                  <img src="/git.svg" alt="GitHub logo" className="relative z-10 h-8 w-8" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">Full Profile Stats</p>
+                  <p className="text-xs text-white/60">Live stats for prince-up</p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-semibold text-white">GitHub Profile Overview</p>
-                <p className="text-xs text-white/60">Live stats for prince-up</p>
-              </div>
+              <FiGithub className="h-5 w-5 text-white/70" />
             </div>
-            <FiGithub className="h-5 w-5 text-white/70" />
-          </div>
 
-          <motion.img
-            src="https://github-readme-stats.vercel.app/api?username=prince-up&show_icons=true&theme=tokyonight&hide_border=true"
-            alt="Prince Yadav GitHub stats"
-            className="w-full rounded-xl"
-            whileHover={{ scale: 1.02 }}
-          />
-        </motion.div>
+            <motion.img
+              src="https://github-readme-stats.vercel.app/api?username=prince-up&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"
+              alt="Prince Yadav GitHub stats"
+              className="w-full rounded-xl"
+              whileHover={{ scale: 1.02 }}
+            />
+          </motion.div>
+
+          {/* Trohpy / Top Repos */}
+          <motion.div
+            className="rounded-2xl border border-white/10 p-6 bg-black-100 overflow-hidden"
+            variants={cardVariants}
+            whileHover={{
+              borderColor: "rgba(168, 85, 247, 0.5)",
+              boxShadow: "0 8px 32px rgba(168, 85, 247, 0.1)",
+            }}
+          >
+            <motion.img
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=prince-up&layout=compact&theme=tokyonight&hide_border=true"
+              alt="Prince Yadav Top Languages"
+              className="w-full rounded-xl"
+              whileHover={{ scale: 1.02 }}
+            />
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* CTA Button */}
