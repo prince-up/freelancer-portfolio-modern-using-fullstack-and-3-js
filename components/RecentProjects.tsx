@@ -56,8 +56,8 @@ const RecentProjects = () => {
                 title="Visit Live Site"
                 href={item.liveLink}
               >
-                <div className="flex flex-col w-[85vw] sm:w-[24rem] md:w-[30vw] lg:w-[28vw] rounded-2xl overflow-hidden p-2">
-                  <div className="relative flex items-center justify-center w-full overflow-hidden h-[25vh] lg:h-[30vh] md:h-[28vh] mb-6 rounded-2xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#13162D]/50 drop-shadow-xl">
+                <div className="flex flex-col w-[80vw] sm:w-[480px] max-w-full lg:max-w-[500px] rounded-2xl overflow-hidden p-2 transition-all">
+                  <div className="relative flex items-center justify-center w-full overflow-hidden h-[25vh] lg:h-[30vh] mb-6 rounded-2xl border border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#13162D]/50 drop-shadow-xl">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 z-0" />
                     <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover opacity-60 z-0" />
                     <img
@@ -71,7 +71,7 @@ const RecentProjects = () => {
                     {item.title}
                   </h1>
 
-                  <p className="font-light text-sm md:text-base text-purple-200/80 mt-2 mb-6 line-clamp-2 min-h-12 leading-relaxed">
+                  <p className="font-light text-sm md:text-base text-purple-200/80 mt-2 mb-6 min-h-20 leading-relaxed">
                     {item.des}
                   </p>
 
