@@ -30,7 +30,7 @@ const AICodeShowcase = () => {
     }, 800);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [codeLines.length]);
 
   return (
     <section className="py-20 px-4">

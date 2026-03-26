@@ -67,7 +67,7 @@ const AboutMe = () => {
           >
             <div className="prose prose-lg prose-invert text-white-200/90 leading-relaxed font-light">
               <p className="text-xl text-white/90">
-                Hi, I'm <strong className="font-bold text-cyan-300">Prince Yadav</strong>, a passionate software engineer completely focused on building practical, high-performance web projects from the ground up.
+                Hi, I&apos;m <strong className="font-bold text-cyan-300">Prince Yadav</strong>, a passionate software engineer completely focused on building practical, high-performance web projects from the ground up.
               </p>
               <p>
                 As a tech enthusiast with a strong interest in full-stack engineering, I specialize in transforming complex business problems into elegant, scalable digital solutions. I am extremely comfortable moving through both frontend aesthetics and deeply optimized backend architectures.
